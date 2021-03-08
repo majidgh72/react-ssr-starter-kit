@@ -1,0 +1,37 @@
+$directions: ('t':'top', 'r':'right', 'b':'bottom', 'l':'left');
+$spacings: ('m':'margin', 'p':'padding');
+$axis: x, y;
+
+@each $spShort, $spName in $spacings {
+    @each $dirShort, $dirName in $directions {
+        @for $i from 1 through 6 {
+            .#{$spShort}#{$dirShort}-#{$i}{
+                #{$spName}-#{$dirName}: ($i * 10) * 1px;
+            }
+        }
+        
+    }
+
+    @each $ax in $axis {
+        @for $i from 1 through 6 {
+            .#{$spShort}#{$ax}-#{$i}{
+                @if $ax==x{
+                    #{$spName}-right: ($i * 10) * 1px;
+                    #{$spName}-left: ($i * 10) * 1px;
+                } @else {
+                    #{$spName}-top: ($i * 10) * 1px;
+                    #{$spName}-bottom: ($i * 10) * 1px;
+                }
+                
+            }
+        }  
+    }
+
+    @for $i from 1 through 6 {
+        .#{$spShort}-#{$i}{
+            #{$spName}: ($i * 10) * 1px;        
+        }
+    }
+
+
+}

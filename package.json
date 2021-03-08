@@ -1,0 +1,35 @@
+{
+  "name": "react-ssr-starter-kit",
+  "version": "1.0.0",
+  "description": "Reacr SSR Starter kit with async data fetching",
+  "license": "MIT",
+  "author": {
+    "name": "Majid Ghafoorzade",
+    "email": "majidghafoorzade@gmail.com",
+    "url": "https://github.com/majidgh72"
+  },
+  "scripts": {
+    "start": "razzle start",
+    "build": "razzle build",
+    "test": "razzle test --env=jsdom",
+    "start:prod": "set NODE_ENV=production && node build/server.js"
+  },
+  "dependencies": {
+    "axios": "^0.21.1",
+    "classnames": "^2.2.6",
+    "express": "4.17.1",
+    "i18next": "^19.8.9",
+    "prop-types": "^15.7.2",
+    "react": "16.14.0",
+    "react-dom": "16.14.0",
+    "react-frontload": "^2.0.0",
+    "react-helmet": "^6.1.0",
+    "react-i18next": "^11.8.7",
+    "react-router-config": "^5.1.1",
+    "react-router-dom": "5.2.0"
+  },
+  "devDependencies": {
+    "razzle": "3.3.11",
+    "razzle-plugin-scss": "^3.3.11"
+  }
+}

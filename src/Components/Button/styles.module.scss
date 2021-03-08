@@ -1,0 +1,10 @@
+.Button {
+    background-color: var(--color-glory);
+    color: var(--color-white);
+    padding: 15px 20px;
+    border-radius: var(--border-radius);
+
+    &.primary {
+        background-color: var(--color-primary);
+    }
+}
